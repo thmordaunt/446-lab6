@@ -15,6 +15,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 	<meta name="generator" content="Geany 1.27" />
     <style>
+        body {
+            font: 15px Trebuchet MS, sans-serif;
+        }
+        
         /* The side navigation menu */
         .sidenav {
           height: 100%; /* 100% Full-height */
@@ -23,7 +27,7 @@
           z-index: 1; /* Stay on top */
           top: 0; /* Stay at the top */
           right: 0;
-          background-color: #111; /* Black*/
+          background-color: #323232; /* Black*/
           font-family: Arial;
           overflow-x: hidden; /* Disable horizontal scroll */
           padding-top: 60px; /* Place content 60px from the top */
@@ -56,9 +60,10 @@
         }
         
         .box {
-            border-style: solid;
+            border: solid;
             border-width: 2px;
         }
+
     
     </style>
 </head>
@@ -67,16 +72,16 @@
 
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="home-page.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="new-workout.html">New Workout</a>
       <a href="past-workout-list.html">Past Workouts</a>
       <a href="account-info.html">Account Info</a>
     </div>
    
 	<div>
-		<h1>
+		<h1 style="font-family:Courier;">
 			CWU Rock Wall
-			 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+			 <span style="font-size:30px;cursor:pointer;float:right" onclick="openNav()">&#9776; </span>
              <script>
                 function openNav() {
                   document.getElementById("mySidenav").style.width = "250px";
@@ -92,16 +97,37 @@
 	<h2>Hello (USERNAME)</h2>
 	<h3>Press the menu button to begin!</h3>
 	
-    <div class="box">
+    <p class="box">
         
-        <p><strong>Your last visit:</strong>
-            <div>Date: (LAST VISIT DATE)</div>
-            <div>Climbs: (LAST CLIMBS)</div>
-            <div>Duration: (LAST DURATION)</div>
-            <div>Caloried Burned: (LAST CALORIES BURNED)</div>
-            <div>Feet Climbed: (LAST HEIGHT CLIMBED)</div>
-        </p>
-	</div>
+
+        <table align="center"  >
+            <thead>
+                <th colspan="2">Last Visit</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="right">Date</td>
+                    <td>(LAST VISIT DATE)</td>
+                </tr>
+                <tr>
+                    <td border-left="1" align="right">Climbs</td>
+                    <td>(LAST CLIMBS)</td>
+                </tr>
+                <tr>
+                    <td align="right">Duration</td>
+                    <td>(LAST DURATION)</td>
+                </tr>
+                <tr>
+                    <td align="right">Calories Burned</td>
+                    <td>(LAST CALORIES BURNED)</td>
+                </tr>
+                <tr>
+                    <td align="right">Feet Climbed</td>
+                    <td>(LAST HEIGHT CLIMBED)</td>
+                </tr>
+            </tbody>
+        </table>
+	</p>
 	
 </body>
 
