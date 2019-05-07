@@ -16,7 +16,15 @@
 	<meta name="generator" content="Geany 1.27" />
     <style>
         body {
-            font: 15px Trebuchet MS, sans-serif;
+            font: 17px Trebuchet MS, sans-serif;
+        }
+        
+        h1 {
+            font-family: Courier;
+        }
+        
+        h2, h3 {
+            font-family: Lucida Console;
         }
         
         /* The side navigation menu */
@@ -28,15 +36,15 @@
           top: 0; /* Stay at the top */
           right: 0;
           background-color: #323232; /* Black*/
-          font-family: Arial;
+          
           overflow-x: hidden; /* Disable horizontal scroll */
-          padding-top: 60px; /* Place content 60px from the top */
+          padding-top: 50px; /* Place content 50px from the top */
           transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
         }
 
         /* The navigation menu links */
         .sidenav a {
-          padding: 8px 8px 8px 32px;
+          padding: 8px 8px 8px 22px;
           text-decoration: none;
           font-size: 25px;
           font-weight: bold;
@@ -58,10 +66,25 @@
           font-size: 36px;
           margin-left: 50px;
         }
+
+        th, td {
+            padding: 0 20px 3px 20px;
+        }
         
-        .box {
+        #leftCol {
+            font-weight: bold;
+            border-right: 1px solid;
+        }
+        
+        #rightCol {
+            border-left: 1px solid;
+        }
+        
+        table {
+            table-layout: fixed;
+            width: 90%;
+            margin: 0 auto;
             border: solid;
-            border-width: 2px;
         }
 
     
@@ -79,14 +102,14 @@
     </div>
    
 	<div>
-		<h1 style="font-family:Courier;">
-			CWU Rock Wall
+		<h1>
+            <img src="images/logo.png" width="99" height="35" alt="logo.png">
+			 Rock Wall
 			 <span style="font-size:30px;cursor:pointer;float:right" onclick="openNav()">&#9776; </span>
              <script>
                 function openNav() {
                   document.getElementById("mySidenav").style.width = "250px";
                 }
-
                 function closeNav() {
                   document.getElementById("mySidenav").style.width = "0";
                 }
@@ -94,40 +117,36 @@
 		</h1>
 	</div>
 	<hr>
-	<h2>Hello (USERNAME)</h2>
+	<h2>Hello <em>User</em></h2>
 	<h3>Press the menu button to begin!</h3>
 	
-    <p class="box">
-        
-
-        <table align="center"  >
-            <thead>
-                <th colspan="2">Last Visit</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td align="right">Date</td>
-                    <td>(LAST VISIT DATE)</td>
-                </tr>
-                <tr>
-                    <td border-left="1" align="right">Climbs</td>
-                    <td>(LAST CLIMBS)</td>
-                </tr>
-                <tr>
-                    <td align="right">Duration</td>
-                    <td>(LAST DURATION)</td>
-                </tr>
-                <tr>
-                    <td align="right">Calories Burned</td>
-                    <td>(LAST CALORIES BURNED)</td>
-                </tr>
-                <tr>
-                    <td align="right">Feet Climbed</td>
-                    <td>(LAST HEIGHT CLIMBED)</td>
-                </tr>
-            </tbody>
-        </table>
-	</p>
+    <table >
+        <thead>
+            <th colspan="2">Last Visit</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="leftCol" align="right">Date</td>
+                <td id="rightCol">01/07/2019</td>
+            </tr>
+            <tr>
+                <td id="leftCol" align="right">Climbs</td>
+                <td id="rightCol">4</td>
+            </tr>
+            <tr>
+                <td id="leftCol" align="right">Duration</td>
+                <td id="rightCol">1h:4m</td>
+            </tr>
+            <tr>
+                <td id="leftCol" align="right">Calories Burned</td>
+                <td id="rightCol">600 Cal</td>
+            </tr>
+            <tr>
+                <td id="leftCol" align="right">Feet Climbed</td>
+                <td id="rightCol">22 ft</td>
+            </tr>
+        </tbody>
+    </table>
 	
 </body>
 

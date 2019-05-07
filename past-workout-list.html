@@ -12,39 +12,152 @@
 <head>
 	<title>Past Workout List</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 	<meta name="generator" content="Geany 1.27" />
+    <style>
+        body {
+            font: 17px Trebuchet MS, sans-serif;
+        }
+        
+        h1 {
+            font-family: Courier;
+        }
+        
+        h2, h3 {
+            font-family: Comic Sans MS;
+        }
+        
+        /* The side navigation menu */
+        .sidenav {
+          height: 100%; /* 100% Full-height */
+          width: 0; /* 0 width - change this with JavaScript */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Stay on top */
+          top: 0; /* Stay at the top */
+          right: 0;
+          background-color: #323232; /* Black*/
+          
+          overflow-x: hidden; /* Disable horizontal scroll */
+          padding-top: 50px; /* Place content 50px from the top */
+          transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+          padding: 8px 8px 8px 22px;
+          text-decoration: none;
+          font-size: 25px;
+          font-weight: bold;
+          color: #ff7900;
+          display: block;
+          transition: 0.3s;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:active, a:hover {
+          color: #f1f1f1;
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+
+        th, td {
+            padding: 0 20px 3px 20px;
+        }
+        
+        #leftCol {
+            font-weight: bold;
+            border-right: 1px solid;
+            width: 9%;
+            padding-left: 5px;
+        }
+        
+        #midCol {
+            border-left: 1px solid;
+            border-right: 1px solid;
+            margin-right: 20px;
+        }
+        
+        #rightCol {
+            border-left: 1px solid;
+        }
+        
+        th {
+            border-bottom: 1px solid;
+        }
+        
+        table {
+            table-layout: fixed;
+            width: 65%;
+            margin: 0 auto;
+            border: solid;
+        }
+
+    
+    </style>
 </head>
 
-<body bgcolor = "orange">
+<body bgcolor = "#ff7900">
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="new-workout.html">New Workout</a>
+      <a href="past-workout-list.html">Past Workouts</a>
+      <a href="account-info.html">Account Info</a>
+    </div>
+    
 	<div>
 		<h1>
-			CWU Rock Wall
-			<img src="images/menu-button.png">
+            <img src="images/logo.png" width="99" height="35" alt="logo.png">
+			 Rock Wall
+			 <span style="font-size:30px;cursor:pointer;float:right" onclick="openNav()">&#9776; </span>
+             <script>
+                function openNav() {
+                  document.getElementById("mySidenav").style.width = "250px";
+                }
+
+                function closeNav() {
+                  document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
 		</h1>
 	</div>
 	<hr>
 	<h2>Past Workout List</h2>
-	<hr>
+
 	
-	<table style = "width: 95%">
-		<tr>
-			<th>
-				#
-			</th>
-			<th>
-				Name
-			</th>
-			<th>
-				Time
-			</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
-	(DYNAMIC TABLE CONTENT! WOW)
+    <table >
+        <thead>                
+            <th id="leftCol" align="right">#</th>
+            <th id="midCol" align="center">Date</th>
+            <th id="rightCol">Climbs</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="leftCol" align="right">1</td>
+                <td id="midCol" align="center">Brandon</td>
+                <td id="rightCol" align="center">1h:1m</td>
+            </tr>
+            <tr>
+                <td id="leftCol" align="right">2</td>
+                <td id="midCol" align="center">Melinda</td>
+                <td id="rightCol" align="center">44m</td>
+            </tr>
+            <tr>
+                <td id="leftCol" align="right">3</td>
+                <td id="midCol" align="center">Brandon</td>
+                <td id="rightCol" align="center">26m</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
 	<img src = "images/fake-past-workouts-list.png">
 	
 </body>
